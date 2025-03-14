@@ -1,0 +1,20 @@
+FROM ghcr.io/open-webui/open-webui:main
+
+# Sobrescrever o arquivo de configuração
+COPY <<EOF /app/backend/open_webui/env.py
+import os
+from typing import Optional
+
+WEBUI_NAME = "ChatBTV"
+WEBUI_TITLE = "ChatBTV"
+WEBUI_DESCRIPTION = "ChatBTV"
+WEBUI_META_TITLE = "ChatBTV"
+WEBUI_META_DESCRIPTION = "ChatBTV"
+
+# Outras configurações necessárias
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
+WEBUI_SECRET_KEY = os.environ.get("WEBUI_SECRET_KEY", "")
+EOF
+
+# Garantir permissões corretas
+RUN chmod 644 /app/backend/open_webui/env.py
