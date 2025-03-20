@@ -12,9 +12,9 @@ services:
       - OLLAMA_BASE_URL=http://ollama:11434
       - WEBUI_NAME=ChatBTV
       - WEBUI_TITLE=ChatBTV
-      - WEBUI_DESCRIPTION=ChatBTV - Sua plataforma de chat inteligente
+      - WEBUI_DESCRIPTION=ChatBTV - Gestão inteligente
       - WEBUI_META_TITLE=ChatBTV
-      - WEBUI_META_DESCRIPTION=ChatBTV - Sua plataforma de chat inteligente
+      - WEBUI_META_DESCRIPTION=ChatBTV - Gestão inteligente
     restart: unless-stopped
 
   ollama:
