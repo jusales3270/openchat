@@ -14,7 +14,7 @@
 
 **ChatBTV is an [extensible](https://docs.openwebui.com/features/plugin/), feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline.** It supports various LLM runners like **Ollama** and **OpenAI-compatible APIs**, with **built-in inference engine** for RAG, making it a **powerful AI deployment solution**.
 
-![Open WebUI Demo](./demo.gif)
+![Chat BTV Demo](./demo.gif)
 
 > [!TIP]  
 > **Looking for an [Enterprise Plan](https://docs.openwebui.com/enterprise)?** – **[Speak with Our Sales Team Today!](mailto:sales@openwebui.com)**
@@ -23,7 +23,7 @@
 
 For more information, be sure to check out our [Open WebUI Documentation](https://docs.openwebui.com/).
 
-## Key Features of Open WebUI ⭐
+## Key Features of Chat BTV ⭐
 
 - 🚀 **Effortless Setup**: Install seamlessly using Docker or Kubernetes (kubectl, kustomize or helm) for a hassle-free experience with support for both `:ollama` and `:cuda` tagged images.
 
@@ -57,31 +57,31 @@ For more information, be sure to check out our [Open WebUI Documentation](https:
 
 - 🌐🌍 **Multilingual Support**: Experience Open WebUI in your preferred language with our internationalization (i18n) support. Join us in expanding our supported languages! We're actively seeking contributors!
 
-- 🧩 **Pipelines, Open WebUI Plugin Support**: Seamlessly integrate custom logic and Python libraries into Open WebUI using [Pipelines Plugin Framework](https://github.com/open-webui/pipelines). Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. [Examples](https://github.com/open-webui/pipelines/tree/main/examples) include **Function Calling**, User **Rate Limiting** to control access, **Usage Monitoring** with tools like Langfuse, **Live Translation with LibreTranslate** for multilingual support, **Toxic Message Filtering** and much more.
+- 🧩 **Pipelines, Chat BTV Plugin Support**: Seamlessly integrate custom logic and Python libraries into Open WebUI using [Pipelines Plugin Framework](https://github.com/open-webui/pipelines). Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. [Examples](https://github.com/open-webui/pipelines/tree/main/examples) include **Function Calling**, User **Rate Limiting** to control access, **Usage Monitoring** with tools like Langfuse, **Live Translation with LibreTranslate** for multilingual support, **Toxic Message Filtering** and much more.
 
-- 🌟 **Continuous Updates**: We are committed to improving Open WebUI with regular updates, fixes, and new features.
+- 🌟 **Continuous Updates**: We are committed to improving Chat BTV with regular updates, fixes, and new features.
 
-Want to learn more about Open WebUI's features? Check out our [Open WebUI documentation](https://docs.openwebui.com/features) for a comprehensive overview!
+Want to learn more about Chat BTV's features? Check out our [Chat BTV documentation](https://docs.openwebui.com/features) for a comprehensive overview!
 
-## 🔗 Also Check Out Open WebUI Community!
+## 🔗 Also Check Out Chat BTV Community!
 
-Don't forget to explore our sibling project, [Open WebUI Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. Open WebUI Community offers a wide range of exciting possibilities for enhancing your chat interactions with Open WebUI! 🚀
+Don't forget to explore our sibling project, [Chat BTV Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. Chat BTV Community offers a wide range of exciting possibilities for enhancing your chat interactions with Chat BTV! 🚀
 
 ## How to Install 🚀
 
 ### Installation via Python pip 🐍
 
-Open WebUI can be installed using pip, the Python package installer. Before proceeding, ensure you're using **Python 3.11** to avoid compatibility issues.
+Chat BTV can be installed using pip, the Python package installer. Before proceeding, ensure you're using **Python 3.11** to avoid compatibility issues.
 
-1. **Install Open WebUI**:
-   Open your terminal and run the following command to install Open WebUI:
+1. **Install Chat BTV**:
+   Open your terminal and run the following command to install Chat BTV:
 
    ```bash
    pip install open-webui
    ```
 
-2. **Running Open WebUI**:
-   After installation, you can start Open WebUI by executing:
+2. **Running Chat BTV**:
+   After installation, you can start Chat BTV by executing:
 
    ```bash
    open-webui serve
@@ -92,7 +92,7 @@ This will start the Open WebUI server, which you can access at [http://localhost
 ### Quick Start with Docker 🐳
 
 > [!NOTE]  
-> Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [Open WebUI Documentation](https://docs.openwebui.com/) is ready to assist you.
+> Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [Chat BTV Documentation](https://docs.openwebui.com/) is ready to assist you.
 
 > [!WARNING]
 > When using Docker to install Open WebUI, make sure to include the `-v open-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
@@ -116,13 +116,13 @@ This will start the Open WebUI server, which you can access at [http://localhost
   docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
-- **To run Open WebUI with Nvidia GPU support**, use this command:
+- **To run Chat BTV with Nvidia GPU support**, use this command:
 
   ```bash
   docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
   ```
 
-### Installation for OpenAI API Usage Only
+### Installation for Chat BTV Usage Only
 
 - **If you're only using OpenAI API**, use this command:
 
@@ -130,9 +130,9 @@ This will start the Open WebUI server, which you can access at [http://localhost
   docker run -d -p 3000:8080 -e OPENAI_API_KEY=your_secret_key -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
-### Installing Open WebUI with Bundled Ollama Support
+### Installing Chat BTV with Bundled Ollama Support
 
-This installation method uses a single container image that bundles Open WebUI with Ollama, allowing for a streamlined setup via a single command. Choose the appropriate command based on your hardware setup:
+This installation method uses a single container image that bundles Chat BTV with Ollama, allowing for a streamlined setup via a single command. Choose the appropriate command based on your hardware setup:
 
 - **With GPU Support**:
   Utilize GPU resources by running the following command:
@@ -160,7 +160,7 @@ We offer various installation alternatives, including non-Docker native installa
 
 Encountering connection issues? Our [Open WebUI Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [Open WebUI Discord](https://discord.gg/5rJgQTnV4s).
 
-#### Open WebUI: Server Connection Error
+#### Chat BTV: Server Connection Error
 
 If you're experiencing connection issues, it’s often due to the WebUI docker container not being able to reach the Ollama server at 127.0.0.1:11434 (host.docker.internal:11434) inside the container . Use the `--network=host` flag in your docker command to resolve this. Note that the port changes from 3000 to 8080, resulting in the link: `http://localhost:8080`.
 
@@ -203,7 +203,7 @@ export HF_HUB_OFFLINE=1
 
 ## What's Next? 🌟
 
-Discover upcoming features on our roadmap in the [Open WebUI Documentation](https://docs.openwebui.com/roadmap/).
+Discover upcoming features on our roadmap in the [Chat BTV Documentation](https://docs.openwebui.com/roadmap/).
 
 ## License 📜
 
@@ -212,7 +212,7 @@ This project is licensed under the [BSD-3-Clause License](LICENSE) - see the [LI
 ## Support 💬
 
 If you have any questions, suggestions, or need assistance, please open an issue or join our
-[Open WebUI Discord community](https://discord.gg/5rJgQTnV4s) to connect with us! 🤝
+[Chat BTV Discord community](https://discord.gg/5rJgQTnV4s) to connect with us! 🤝
 
 ## Star History
 
